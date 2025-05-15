@@ -1,0 +1,703 @@
+.intro-page {
+    background-color: #f4f4f4;
+    padding-top: 17rem;
+}
+
+.intro-header {
+    background-color: #fff;
+    color: #0D4E96;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.intro-nameframe-header {
+    height: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 100%;
+    margin: 0;
+    padding: 0 2rem;
+    border-top: 0.5rem solid #20ca72;
+}
+
+.intro-nameframe_uni-header {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.intro-Vnameuni-header h1 {
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.intro-Enameuni-header h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    color: red;
+    text-align: center;
+}
+
+.intro-nameframe_software-header {
+    flex: 2;
+    display: flex;
+    align-items: center;
+}
+
+.intro-logo_uni-header {
+    margin-right: 2rem;
+}
+
+.intro-logo_uni-header img {
+    height: 4.5rem;
+}
+
+.intro-logo_software-header img {
+    margin: 0 5rem;
+    height: 9.2rem;
+}
+
+.intro-name_software-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1;
+}
+
+.intro-name_software-header h1 {
+    margin: 0;
+    line-height: 1.2;
+    font-size: 2.8rem;
+    text-align: start;
+    width: 100%;
+}
+
+.nav-login {
+    background-color: #375f8d;
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10rem;
+    margin-top: 1rem;
+}
+
+.nav_function ul {
+    display: flex;
+    list-style-type: none;
+    gap: 4rem;
+}
+
+.nav_icon {
+    color: white;
+    font-size: 2rem;
+}
+
+.intro_nav_item a {
+    color: white;
+    text-decoration: none;
+    padding: 1.3rem 1.5rem;
+    transition: color 0.3s, background-color 0.3s;
+    font-size: 2rem;
+}
+
+.intro_nav_item a:hover {
+    color: black;
+    background-color: rgb(26, 156, 225);
+    border-radius: 0.5rem;
+}
+
+.nav_functiontologin {
+    display: flex;
+    align-items: center;
+}
+
+.nav_item-login {
+    list-style-type: none;
+}
+
+.nav_item-login a {
+    background-color: rgb(19, 223, 53);
+    color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 0.8rem;
+    text-decoration: none;
+    font-weight: bold;
+    transition: opacity 0.3s;
+    font-size: 1.5rem;
+}
+
+.nav_item-login a:hover {
+    opacity: 0.8;
+}
+
+.main-login {
+    background-color: white;
+    padding: 2rem;
+    margin: auto;
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    max-width: 140rem;
+    height: 70rem;
+    overflow: hidden;
+    border: 0.2rem solid #ddd;
+    border-radius: 1rem;
+    box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 300%;
+    justify-content: center;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    object-position: center;
+}
+
+.dots-container {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dot {
+    width: 1rem;
+    height: 1rem;
+    margin: 0 0.5rem;
+    background-color: #f6f3f3;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #4c7be8;
+}
+
+.menu_main-login {
+    background-color: rgba(237, 236, 236, 0.703);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 0.5rem;
+    margin-top: 5rem;
+    padding: 2rem;
+}
+
+.slogan_main-login {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.slogan_main-login h1 {
+    font-size: 3rem;
+    color: #2c3e50;
+    margin: 0;
+}
+
+.highlight-c {
+    color: #0b81cf;
+    font-weight: bold;
+}
+
+.highlight-n {
+    color: #0b81cf;
+    font-weight: bold;
+}
+
+.highlight-e {
+    color: #0b81cf;
+    font-weight: bold;
+}
+
+.slogan_main-login h3 {
+    font-size: 2rem;
+    color: #49738f;
+    margin: 2rem 0;
+}
+
+.image_menu_main-login {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.image-slogan-menu {
+    max-width: 100%;
+    height: auto;
+    border-radius: 1.5rem;
+}
+
+#news_main-login h1,
+#intro_main-login h1,
+.development_team h1 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    text-align: left;
+    font-size: 2.4rem;
+    color: #0D4E96;
+    border-bottom: 0.2rem solid #0D4E96;
+    padding-bottom: 1rem;
+}
+
+#news_main-login h3,
+#intro_main-login p,
+.development_team table {
+    margin: 1.5rem 0;
+    font-size: 1.8rem;
+    color: #333;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+#news_main-login {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    padding: 2rem;
+    background-color: #e9f7f9;
+    border-radius: 0.8rem;
+    box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: 40rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+#news_main-login h1 {
+    margin: 0;
+    font-size: 2.4rem;
+    color: #0D4E96;
+    text-align: left;
+}
+
+.news_content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+#intro_main-login {
+    background-color: #f4f9f4;
+    padding: 2rem;
+    border-radius: 0.8rem;
+    box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.1);
+    margin-top: 4rem;
+}
+
+.obj_intro_main {
+    margin-bottom: 2rem;
+}
+
+#intro_main-login h1 {
+    font-size: 2.8rem;
+    color: #0D4E96;
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+#intro_main-login p {
+    font-size: 2rem;
+    line-height: 1.6;
+    color: #333;
+    margin: 1rem 0;
+}
+
+.development_team {
+    margin-top: 2rem;
+    padding: 2rem;
+    background-color: #e3f2fd;
+    border-radius: 0.8rem;
+    box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.development_team table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+}
+
+.development_team th {
+    background-color: #0D4E96;
+    color: white;
+    padding: 1.2rem;
+    text-align: left;
+    font-weight: bold;
+}
+
+.development_team td {
+    background-color: #f9f9f9;
+    padding: 1.2rem;
+    text-align: left;
+    border: 0.1rem solid #0D4E96;
+}
+
+.development_team tr:hover {
+    background-color: #e1f5fe;
+}
+
+.development_team tr:nth-child(odd) td {
+    background-color: #f1f1f1;
+}
+
+.development_team tr:nth-child(even) td {
+    background-color: #ffffff;
+}
+
+.development_team th, .development_team td {
+    border: 0.2rem solid #0D4E96;
+}
+
+.development_team td:first-child,
+.development_team th:first-child {
+    border-left: none;
+}
+
+.development_team td:last-child,
+.development_team th:last-child {
+    border-right: none;
+}
+
+#communication_main-login {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    padding: 2rem;
+    background-color: #ebf5f9;
+    border-radius: 0.8rem;
+    box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: 40rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+#communication_main-login h1 {
+    margin: 0;
+    font-size: 2.4rem;
+    color: #0D4E96;
+    text-align: left;
+    border-bottom: 0.2rem solid #0D4E96;
+    padding-bottom: 1rem;
+}
+
+.communication_content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.communication_content h3 {
+    font-size: 1.8rem;
+    color: #333;
+    line-height: 1.6;
+    text-align: center;
+}
+
+#contact-with-footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: #d2d2eb;
+    padding: 0;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 0 1rem;
+    padding: 3rem 10rem;
+}
+
+iframe {
+    border: none;
+    border-radius: 5%;
+    width: 100%;
+    height: 20rem;
+    max-width: 40rem;
+}
+
+.footer-section h1 {
+    font-size: 2.4rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section li {
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+}
+
+.footer-section li i {
+    margin-right: 0.8rem;
+    color: #0D4E96;
+}
+
+.footer-section a {
+    color: #0D4E96;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section a:hover {
+    color: #ff6600;
+    text-decoration: underline;
+}
+
+.footer-section ul li {
+    padding: 0.5rem 0;
+}
+
+.footer-section ul li:hover {
+    background-color: rgba(221, 221, 221, 0.3);
+    border-radius: 0.5rem;
+}
+
+@media (min-width: 1200px) {
+    .intro-nameframe-header {
+        height: 10rem;
+        padding: 0 8rem;
+    }
+
+    .intro-name_software-header h1 {
+        font-size: 2.8rem;
+    }
+
+    .intro-logo_software-header img {
+        height: 9.2rem;
+    }
+}
+
+@media (max-width: 1199px) {
+    .intro-nameframe-header {
+        height: 8rem;
+        padding: 0 4rem;
+    }
+
+    .intro-name_software-header h1 {
+        font-size: 2.4rem;
+    }
+
+    .intro-logo_software-header img {
+        height: 7rem;
+        margin: 0 3rem;
+    }
+
+    .nav-login {
+        height: 4.5rem;
+        padding: 0 4rem;
+    }
+}
+
+@media (max-width: 991px) {
+    .intro-nameframe-header {
+        height: 7rem;
+    }
+
+    .intro-Vnameuni-header h1 {
+        font-size: 1.2rem;
+    }
+
+    .intro-Enameuni-header h3 {
+        font-size: 0.9rem;
+    }
+
+    .intro-logo_uni-header img {
+        height: 3.5rem;
+    }
+
+    .intro-logo_software-header img {
+        height: 6rem;
+        margin: 0 2rem;
+    }
+
+    .intro-name_software-header h1 {
+        font-size: 2rem;
+    }
+
+    .nav_function ul {
+        gap: 2rem;
+    }
+
+    .intro_nav_item a {
+        font-size: 1.6rem;
+        padding: 0.8rem 1rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .intro-nameframe-header {
+        height: 6rem;
+        padding: 0 2rem;
+    }
+
+    .intro-nameframe_uni-header {
+        display: none;
+    }
+
+    .intro-logo_software-header img {
+        height: 5rem;
+        margin: 0 1.5rem;
+    }
+
+    .intro-name_software-header h1 {
+        font-size: 1.8rem;
+    }
+
+    .nav-login {
+        height: 4rem;
+        padding: 0 2rem;
+    }
+
+    .nav_function ul {
+        gap: 1.5rem;
+    }
+
+    .intro_nav_item a {
+        font-size: 1.4rem;
+        padding: 0.8rem;
+    }
+
+    .footer-section {
+        width: 100%;
+        margin: 2rem 0;
+        padding: 2rem;
+    }
+
+    .footer-section h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 575px) {
+    .intro-nameframe-header {
+        height: 5rem;
+        padding: 0 1rem;
+    }
+
+    .intro-logo_software-header img {
+        height: 4rem;
+        margin: 0 1rem;
+    }
+
+    .intro-name_software-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .nav-login {
+        padding: 0 1rem;
+    }
+
+    .intro_nav_item {
+        display: none;
+    }
+
+    .nav_icon {
+        font-size: 1.6rem;
+    }
+
+    .nav_item-login a {
+        font-size: 1.3rem;
+        padding: 0.6rem 1rem;
+    }
+
+    .development_team table {
+        font-size: 1.3rem;
+    }
+
+    #intro_main-login h1 {
+        font-size: 1.8rem;
+    }
+
+    #intro_main-login p {
+        font-size: 1.3rem;
+    }
+
+    #communication_main-login h1 {
+        font-size: 1.5rem;
+    }
+
+    .communication_content {
+        height: 25rem;
+    }
+
+    .communication_content h3 {
+        font-size: 1.3rem;
+    }
+
+    .footer-section {
+        width: 100%;
+        margin: 1rem 0;
+        padding: 1.5rem;
+    }
+
+    .footer-section h1 {
+        font-size: 1.5rem;
+    }
+
+    .footer-section a,
+    .footer-section li {
+        font-size: 1.3rem;
+    }
+
+    .dots-container {
+        display: none;
+    }
+}
+
+@media (max-width: 375px) {
+    .intro-name_software-header h1 {
+        font-size: 1.3rem;
+    }
+
+    .intro-logo_software-header img {
+        height: 3.5rem;
+    }
+
+    .nav_item-login a {
+        font-size: 1.2rem;
+        padding: 0.5rem 0.8rem;
+    }
+}

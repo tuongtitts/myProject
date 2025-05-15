@@ -1,0 +1,182 @@
+/* Animation cho danh sách người dùng khi mở rộng */
+.status.expanded .user-list {
+  display: block;
+  animation: slideIn 0.3s ease-in-out forwards; /* Hiệu ứng slide-in khi mở rộng */
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animation cho từng người dùng khi hiển thị */
+.user-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid #ddd;
+  margin: 5px 0;
+  padding: 8px 0;
+  animation: fadeIn 0.5s ease-in-out forwards; /* Hiệu ứng fade-in cho từng người dùng */
+  animation-delay: calc(var(--index) * 0.1s); /* Tạo độ trễ để các phần tử xuất hiện lần lượt */
+}
+
+/* Đặt biến --index cho từng phần tử li */
+.user-list li {
+  --index: 0; /* Sẽ được gán động từ mã React */
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Animation cho trạng thái online/offline */
+.user-status {
+  font-weight: bold;
+  font-size: 14px;
+  white-space: nowrap;
+  transition: color 0.3s ease, transform 0.3s ease; /* Chuyển màu và scale mượt mà */
+}
+
+.user-status.online {
+  color: green;
+  animation: pulse 0.5s ease-in-out 2; /* Nhấp nháy khi online */
+}
+
+.user-status.offline {
+  color: gray;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Animation khi hover vào người dùng */
+.user-list li:hover {
+  background-color: #f0f0f0;
+  transition: background-color 0.3s ease;
+}
+
+/* Animation cho avatar người dùng */
+.user-avatar {
+  width: 30px;
+  height: 30px;
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+
+/* Các style hiện có giữ nguyên */
+.status {
+  width: 78%;
+  max-width: 300px;
+  min-width: 60px;
+  min-height: 820px;
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin: 10px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: max-width 0.3s ease-in-out, width 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+.status.expanded {
+  width: 300px;
+  max-width: 300px;
+}
+
+.status-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  font-size: 15px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+#toggle-status {
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 50%;
+  font-size: 16px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+#toggle-status:hover {
+  background-color: #0056b3;
+  transform: scale(1.1);
+}
+
+.user-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: none;
+}
+
+.user-name {
+  font-size: 16px;
+  color: #333;
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.empty {
+  text-align: center;
+  font-style: italic;
+  color: #888;
+  padding: 10px;
+}
+
+.user-list-wrapper {
+  max-height: 360px;
+  overflow-y: auto;
+  padding-right: 5px;
+}
+
+.user-list-wrapper::-webkit-scrollbar {
+  width: 6px;
+}
+
+.user-list-wrapper::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 4px;
+}
+
+.user-list-wrapper::-webkit-scrollbar-track {
+  background-color: #f9f9f9;
+}

@@ -1,0 +1,178 @@
+.introduction-page {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  margin-top: 15rem;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+  padding: 4rem 2rem;
+}
+
+.introduction-container {
+  max-width: 110remx;
+  width: 95%;
+  background: #ffffff;
+  padding: 5rem;
+  border-radius: 2rem;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
+  animation: slideUp 0.5s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.introduction-container h1 {
+  font-size: 3.5rem; 
+  background: linear-gradient(45deg, #4a6fa5, #6b8cce);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-align: center;
+  margin-bottom: 5rem;
+  padding-bottom: 2rem;
+  position: relative;
+  font-weight: 700;
+}
+
+.introduction-container h1::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 12rem;
+  height: 0.5rem;
+  background: linear-gradient(45deg, #4a6fa5, #6b8cce);
+  border-radius: 0.3rem;
+}
+
+.intro-overview {
+  background: #f8fafc;
+  padding: 3rem;
+  border-radius: 1.5rem;
+  margin-bottom: 4rem;
+  border-left: 0.5rem solid #4a6fa5;
+  transition: transform 0.3s ease;
+}
+
+.intro-overview p {
+  font-size: 1.4rem; 
+  color: #2d3748;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  font-weight: 400;
+}
+
+.intro-features h2, .intro-goals h2 {
+  font-size: 2.4rem;
+  color: #1a202c; 
+  margin-bottom: 3rem;
+  position: relative;
+  padding-left: 2rem;
+  font-weight: 600;
+}
+
+.intro-features h2::before, .intro-goals h2::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 35px;
+  background: linear-gradient(45deg, #4a6fa5, #6b8cce);
+  border-radius: 3px;
+}
+
+.intro-features li {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  padding: 2rem;
+  background: white;
+  border-radius: 1.2rem;
+  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.intro-features li strong {
+  color: #4a6fa5;
+  font-size: 1.4rem; 
+  margin-bottom: 0.8rem;
+  display: block;
+  font-weight: 600;
+}
+
+.intro-goals p {
+  font-size: 1.3rem; 
+  color: #2d3748;
+  line-height: 1.8;
+  padding: 2rem;
+  background: white;
+  border-radius: 1.2rem;
+  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.05);
+}
+
+
+@media (max-width: 768px) {
+  .introduction-container {
+    padding: 3rem;
+  }
+
+  .introduction-container h1 {
+    font-size: 2.8rem; 
+  }
+
+  .intro-features h2, .intro-goals h2 {
+    font-size: 2rem;
+  }
+
+  .intro-overview p,
+  .intro-features li,
+  .intro-goals p {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .introduction-container h1 {
+    font-size: 2.4rem; 
+  }
+
+  .intro-features h2, .intro-goals h2 {
+    font-size: 1.8rem;
+  }
+
+  .intro-overview p,
+  .intro-features li,
+  .intro-goals p {
+    font-size: 1.1rem; 
+  }
+
+  .intro-overview, .intro-features, .intro-goals {
+    padding: 2rem;
+  }
+}
+
+
+@media print {
+  .introduction-container h1 {
+    font-size: 24pt;
+  }
+
+  .intro-features h2, .intro-goals h2 {
+    font-size: 18pt;
+  }
+
+  .intro-overview p,
+  .intro-features li,
+  .intro-goals p {
+    font-size: 12pt;
+  }
+}

@@ -1,0 +1,348 @@
+/* CSS cho bảng người dùng */
+.user-table {
+  width: 100%;
+  max-width: 120rem; /* Chuyển 1200px -> 120rem */
+  border-collapse: collapse;
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 0.4rem 1.2rem rgba(0, 0, 0, 0.08); /* Chuyển 4px -> 0.4rem và 12px -> 1.2rem */
+  margin: 1rem 2rem;
+  font-size: 0.95rem;
+  font-weight: bold; /* In đậm toàn bảng */
+}
+
+.user-table thead {
+  background-color: #f3f4f6;
+  color: #374151;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: bold;
+}
+
+.user-table th,
+.user-table td {
+  border: 1px solid #e5e7eb;
+  padding: 1rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+.user-table td:nth-child(2) {
+  font-size: 1.3rem;
+  color: #1f2937;
+  text-align: left; /* Canh trái */
+  padding-left: 1.5rem; /* Lùi nhẹ cho đẹp */
+}
+
+.user-table td:nth-child(8) {
+  font-size: 0.85rem;
+  color: #6b7280;
+  font-weight: bold; /* In đậm */
+}
+
+.user-table tbody tr:nth-child(even) {
+  background-color: #f9fafb;
+}
+
+.user-table tbody tr:hover {
+  background-color: #eef2ff;
+  transition: background-color 0.2s ease;
+}
+
+/* CSS cho trạng thái online/offline */
+.status-online {
+  display: inline-block;
+  padding: 0.35rem 0.75rem;
+  color: #10b981;
+  background-color: #ecfdf5;
+  font-weight: bold;
+  border-radius: 9999px;
+  font-size: 1rem; /* To hơn một chút */
+}
+
+.status-offline {
+  display: inline-block;
+  padding: 0.35rem 0.75rem;
+  color: #9ca3af;
+  background-color: #f3f4f6;
+  font-weight: bold;
+  border-radius: 9999px;
+  font-size: 0.9rem;
+}
+
+/* CSS cho trạng thái active/inactive */
+.status-active {
+  display: inline-block;
+  padding: 0.35rem 0.75rem;
+  color: #16aae4;
+  background-color: #ecfdf5;
+  font-weight: bold;
+  border-radius: 9999px;
+  font-size: 1rem;
+}
+
+.status-inactive {
+  display: inline-block;
+  padding: 0.35rem 0.75rem;
+  color: #ef4444;
+  background-color: #fef2f2;
+  font-weight: bold;
+  border-radius: 9999px;
+  font-size: 0.9rem;
+}
+
+/* CSS cho nút hành động */
+.user-table button {
+  cursor: pointer;
+  font-size: 1.4rem;
+  padding: 0.3rem 0.5rem;
+  margin: 0 0.2rem;
+  border: none;
+  background: none;
+  border-radius: 0.375rem;
+  transition: all 0.2s ease;
+  color: #2563eb;
+  font-weight: bold;
+}
+
+.user-table button:hover {
+  transform: scale(1.2);
+  background-color: #e0e7ff;
+  box-shadow: 0 0.2rem 0.6rem rgba(0, 0, 0, 0.1); /* Chuyển 2px -> 0.2rem và 6px -> 0.6rem */
+}
+
+.edit-button:hover {
+  color: #2563eb;
+}
+
+.reset-button:hover {
+  color: #f59e0b;
+}
+
+.delete-button:hover {
+  color: #ef4444;
+}
+
+/* CSS cho container chứa ô tìm kiếm và nút refresh */
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 2rem 0;
+  padding: 0 2rem;
+}
+
+/* CSS cho ô tìm kiếm */
+.search-input {
+  flex: 1;
+  max-width: 40rem; /* Giới hạn độ rộng tối đa 400px -> 40rem */
+  padding: 0.8rem 1.2rem;
+  font-size: 1.4rem;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 0.7rem;
+  background-color: #f8fafc;
+  transition: all 0.25s ease;
+  color: #1e293b;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  background-color: #fff;
+  box-shadow: 0 0 0 0.4rem rgba(59, 130, 246, 0.15); /* Chuyển 4px -> 0.4rem */
+}
+
+/* CSS cho nút refresh */
+.refresh-button {
+  width: 4.5rem;
+  height: 3.5rem;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 0.7rem;
+  background: linear-gradient(to right, #3b82f6, #b8c6e3);
+  color: white;
+  font-size: 1.6rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease;
+  box-shadow: 0 0.4rem 0.6rem rgba(59, 130, 246, 0.12); /* Chuyển 4px -> 0.4rem và 6px -> 0.6rem */
+}
+
+.refresh-button:hover {
+  background: linear-gradient(to right, #2563eb, #1d4ed8);
+  transform: rotate(180deg);
+}
+
+/* CSS cho modal overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease;
+}
+
+/* Container cho form trong modal */
+.modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 1.2rem;
+  width: 90%;
+  max-width: 80rem; /* 800px -> 80rem */
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 0.4rem 2rem rgba(0, 0, 0, 0.15); /* Chuyển 4px -> 0.4rem và 20px -> 2rem */
+  animation: slideIn 0.3s ease;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-2rem); /* 20px -> 2rem */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Ngăn cuộn trang khi modal đang mở */
+body.modal-open {
+  overflow: hidden;
+}
+
+/* CSS cho tiêu đề modal */
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 0.3rem solid #e5e7eb; /* 3px -> 0.3rem */
+}
+
+.modal-header h3 {
+  font-size: 2.2rem;
+  color: #1e293b;
+  font-weight: bold;
+  margin: 0;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #64748b;
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+.close-button:hover {
+  background-color: #f1f5f9;
+  color: #ef4444;
+  transform: scale(1.1);
+}
+
+/* Sửa CSS cho form khi hiển thị trong modal */
+.modal-content .user-form {
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  box-shadow: none;
+  background: transparent;
+  border: none;
+}
+
+.modal-content .user-form:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.modal-content h3.text-xl.font-bold {
+  display: none; /* Ẩn tiêu đề trùng lặp vì đã có trong modal-header */
+}
+
+.modal-content h3.text-xl.font-bold::after {
+  display: none;
+}
+
+/* CSS cho trạng thái loading, error và empty */
+.loading-state, 
+.error-state, 
+.empty-state {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.6rem;
+  color: #64748b;
+  background-color: #f8fafc;
+  border-radius: 0.75rem;
+  margin: 2rem 0;
+  box-shadow: 0 0.2rem 0.6rem rgba(0, 0, 0, 0.05); 
+}
+
+.error-state {
+  color: #ef4444;
+  background-color: #fef2f2;
+}
+
+@media  (max-width: 1500px) {
+   .table-container {
+    width: 120rem;
+    overflow-x: auto;
+  }
+}
+@media  (max-width: 1400px) {
+   .table-container {
+    width: 100rem;
+    overflow-x: auto;
+  }
+}
+@media  (max-width: 1200px) {
+   .table-container {
+    width: 80rem;
+    overflow-x: auto;
+  }
+    .action-buttons {
+    display: none;
+  }
+}
+@media  (max-width: 1000px) {
+   .table-container {
+    width: 60rem;
+    overflow-x: auto;
+  }
+  .action-buttons {
+    display: none;
+  }
+}
+@media  (max-width: 800px) {
+   .table-container {
+    width: 40rem;
+    overflow-x: auto;
+  }
+    .action-buttons {
+    display: none;
+  }
+  .search-container {
+    width: 30rem;
+  }
+}
+
+

@@ -1,0 +1,340 @@
+/* ===== Base Styles ===== */
+.user-form {
+  width: 100%;
+  max-width: 80rem;
+  margin-left: 25rem;
+  background: linear-gradient(to bottom, #ffffff, #f8fafc);
+  border-radius: 1.2rem;
+  padding: 3.5rem;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border: 0.1rem solid rgba(226, 232, 240, 0.8);
+}
+
+.user-form:hover {
+  transform: translateY(-0.2rem);
+  box-shadow: 0 1.2rem 3.5rem rgba(0, 0, 0, 0.12);
+}
+
+.user-form h2 {
+  font-size: 2.4rem;
+  margin-bottom: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  color: #1e293b;
+}
+
+h3.text-xl.font-bold {
+  font-size: 2.2rem;
+  margin-bottom: 1.8rem;
+  color: #1e293b;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+h3.text-xl.font-bold::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 73rem;
+  height: 0.3rem;
+  background: linear-gradient(to right, #3b82f6, #60a5fa); /* Gradient màu xanh */
+  border-radius: 0.2rem;
+}
+
+label {
+  font-size: 1.6rem;
+  display: block;
+  margin-bottom: 0.8rem;
+  color: #475569;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.user-form div:focus-within label {
+  color: #3b82f6;
+}
+
+.user-form input,
+.user-form select {
+  width: 100%;
+  min-height: 3rem;
+  padding: 1.4rem 1.6rem;
+  margin-bottom: 0.6rem;
+  border: 0.15rem solid #e2e8f0;
+  border-radius: 0.8rem;
+  font-size: 1.4rem;
+  background-color: #f8fafc;
+  transition: all 0.25s ease;
+  color: #1e293b;
+}
+
+.user-form input:hover,
+.user-form select:hover {
+  background-color: #fff;
+  border-color: #cbd5e1;
+}
+
+.user-form input:focus,
+.user-form select:focus {
+  outline: none;
+  border-color: #3b82f6;
+  background-color: #fff;
+  box-shadow: 0 0 0 0.4rem rgba(59, 130, 246, 0.15);
+}
+
+option {
+  font-size: 1.8rem;
+  padding: 1rem;
+}
+
+.user-form button {
+  width: 100%;
+  min-height: 4.5rem;
+  padding: 1rem 2rem;
+  background: linear-gradient(to right, #3b82f6, #2563eb);
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 0.8rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.4rem 0.6rem rgba(59, 130, 246, 0.12);
+  margin-top: 1rem;
+}
+
+.user-form button:hover {
+  background: linear-gradient(to right, #2563eb, #1d4ed8);
+  transform: translateY(-0.1rem);
+  box-shadow: 0 0.6rem 0.8rem rgba(59, 130, 246, 0.2);
+}
+
+.user-form button:active {
+  transform: translateY(0);
+  box-shadow: 0 0.2rem 0.4rem rgba(59, 130, 246, 0.1);
+}
+
+.user-form button:disabled {
+  background: linear-gradient(to right, #94a3b8, #cbd5e1);
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Spacing between form groups */
+.space-y-4 > * + * {
+  margin-top: 2rem;
+}
+
+/* Custom scrollbar for select elements */
+.user-form select::-webkit-scrollbar {
+  width: 0.8rem;
+}
+
+.user-form select::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 0.4rem;
+}
+
+.user-form select::-webkit-scrollbar-thumb {
+  background: #94a3b8;
+  border-radius: 0.4rem;
+}
+
+.user-form select::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
+
+.userpage_atention{
+  min-width: 105rem;
+  margin-top: 2rem;
+  padding: 2rem;
+  background: #f8f9fa;
+  border: 0.1rem solid #dee2e6;
+  border-radius: 0.8rem;
+}
+
+.userpage_atention {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.userpage_atention_list {
+  list-style-type: disc;
+  margin-left: 2rem;
+}
+
+.userpage_atention_list li {
+  color: #666;
+  font-size: 1.4rem;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+
+@keyframes formAppear {
+  from {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.user-form {
+  animation: formAppear 0.4s ease-out;
+}
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .user-form {
+    max-width: 70rem;
+    padding: 3rem;
+    margin-left: 15rem;
+  }
+
+  h3.text-xl.font-bold::after {
+    width: 100%;
+  }
+}
+
+/* Tablet (768px - 1023px) */
+@media (max-width: 1023px) {
+  .user-form {
+    max-width: 60rem;
+    padding: 2.5rem;
+    margin-left: 10rem;
+  }
+
+  .user-form h2 {
+    font-size: 2rem;
+  }
+
+  h3.text-xl.font-bold {
+    font-size: 1.8rem;
+  }
+
+  label {
+    font-size: 1.4rem;
+  }
+
+  .user-form input,
+  .user-form select {
+    padding: 1.2rem 1.4rem;
+    font-size: 1.3rem;
+  }
+}
+
+/* Mobile (767px and down) */
+@media (max-width: 767px) {
+  .user-form {
+    width: 40rem; /* Fixed width for mobile */
+    margin: 1rem auto;
+    padding: 2rem;
+  }
+
+  .user-form h2 {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+  }
+
+  h3.text-xl.font-bold {
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+  }
+
+  h3.text-xl.font-bold::after {
+    width: 100%;
+    height: 0.2rem;
+  }
+
+  label {
+    font-size: 1.3rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .user-form input,
+  .user-form select {
+    padding: 1rem 1.2rem;
+    font-size: 1.2rem;
+    min-height: 2.5rem;
+  }
+
+  .user-form button {
+    min-height: 4rem;
+    font-size: 1.4rem;
+    padding: 0.8rem 1.6rem;
+  }
+
+  .space-y-4 > * + * {
+    margin-top: 1.5rem;
+  }
+
+  .userpage_atention {
+    min-width: unset;
+    width: 40rem;
+    margin: 1rem auto;
+    padding: 1.5rem;
+  }
+}
+
+/* Small Mobile (480px and down) */
+@media (max-width: 480px) {
+  .user-form {
+    width: 40rem; /* Keep fixed width */
+    padding: 1.5rem;
+  }
+
+  .user-form h2 {
+    font-size: 1.6rem;
+  }
+
+  .userpage_atention {
+    padding: 1rem;
+  }
+
+  .userpage_atention_list li {
+    font-size: 1.2rem;
+  }
+}
+
+/* Datetime Display */
+.current-datetime {
+  position: fixed;
+  top: calc(var(--header-height) - 4rem);
+  right: 2rem;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 0.8rem 1.2rem;
+  border-radius: 0.6rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  z-index: 1001;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 767px) {
+  .current-datetime {
+    position: static;
+    margin: 1rem auto;
+    width: fit-content;
+  }
+}
+
+/* Animations */
+@keyframes formAppear {
+  from {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.user-form {
+  animation: formAppear 0.4s ease-out;
+}

@@ -1,0 +1,193 @@
+
+.login-page {
+    background-color: rgb(251, 248, 244);
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; 
+    padding-top: 6rem; 
+}
+
+
+.form-container {
+    min-width: 35%;
+    padding: 2.4rem;
+    background-color: #fff;
+    border-radius: 2rem;
+    box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.1);
+    margin: 0; 
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.6rem;
+}
+
+.logo-login {
+    width: 25%; 
+    height: auto;
+    background-size: cover;
+}
+
+#softname {
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 0.8rem;
+    color: rgb(34, 34, 138);
+}
+
+#svgateway {
+    color: rgb(224, 69, 69);
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 2.4rem;
+}
+
+.dangnhap {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-bottom: 3rem;
+}
+
+.dangnhap input[type="text"],
+.dangnhap input[type="password"] {
+    width: 90%;
+    padding: 1.2rem;
+    border: 0.1rem solid #ddd;
+    border-radius: 0.5rem;
+    font-size: 1.6rem;
+}
+
+#forget_password {
+    color: rgb(54, 106, 248);
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    margin-top: -0.8rem; 
+    margin-bottom: 1.6rem;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+#forget_password:hover {
+    color: red;
+}
+
+.box__submit {
+    background-color: rgb(23, 110, 210);
+    padding: 0.8rem 2.2rem;
+    text-align: center;
+    border-radius: 0.8rem;
+    transition: opacity 0.3s;
+    cursor: pointer;
+    width: 30%;
+    color:#fff;
+}
+.button_dangnhap {
+    display: flex;
+    justify-content: center;
+}
+.box__submit:hover {
+    opacity: 0.8;
+}
+
+.box__submit button {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.form__submit a {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+    padding: 1rem 2rem;
+}
+
+#result {
+    text-align: center;
+    font-weight: bold;
+    margin: 0.2rem 0 1rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+}
+
+#result.success {
+    color: #155724;
+    background-color: #d4edda;
+    border: 0.1rem solid #c3e6cb;
+}
+
+#result.error {
+    color: #721c24;
+    background-color: #f8d7da;
+    border: 0.1rem solid #f5c6cb;
+}
+
+@media (max-width:768px) {
+    .form-container {
+        max-width: 80%;
+        padding:0.2rem
+    }
+    .dangnhap input {
+        width: 100%;
+        font-size:1.4rem;
+        margin-left:1rem;
+    }
+    .box__submit {
+        width:90%;
+        margin-bottom: 2rem;
+    }
+    .logo-login{
+        width:15%;
+        margin-top:1rem;
+    }
+    #forget_password {
+        margin-left:1rem;
+    }
+    #softname {
+        font-size: 1.8rem;
+    }
+    
+}
+@media (max-width:1024px) and (min-width:768px) {
+    .form-container {
+        max-width: 90%;
+        padding:0.2rem
+    }
+    .dangnhap input {
+        width: 100%;
+        font-size:1.4rem;
+        margin-left:1rem;
+    }
+    .box__submit {
+        width:60%;
+        margin-bottom: 2rem;
+        font-size: 1.8rem;
+    }
+
+    .logo-login{
+        width:10%;
+        margin-top:1rem;
+    }
+    #forget_password {
+        margin-left:1rem;
+    }
+    #softname {
+        font-size: 2.5rem;
+    }
+    #svgateway {
+        font-size: 1.8rem;
+    }
+}
+
+

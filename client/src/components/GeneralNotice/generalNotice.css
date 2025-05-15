@@ -1,0 +1,232 @@
+
+.general_notice-main {
+  width: 97.5%;
+  min-height: 82rem;
+  box-sizing: border-box;
+  border: 0.1rem solid #e2e8f0;
+  padding: 2rem;
+  margin: 1rem;
+  background-color: white;
+  border-radius: 1.2rem;
+  box-shadow: 0 0.4rem 0.6rem rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.general_notice-main:hover {
+  box-shadow: 0 0.8rem 1.5rem rgba(0, 0, 0, 0.1);
+  transform: translateY(-0.2rem);
+}
+
+.general_notice-main.expanded {
+  width: 97.7%;
+  animation: expandWidth 0.3s ease;
+}
+
+@keyframes expandWidth {
+  from { width: 97.5%; }
+  to { width: 97.7%; }
+}
+
+.notice-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.2rem;
+  padding-bottom: 1rem;
+  border-bottom: 0.2rem solid #e2e8f0;
+  position: relative;
+}
+
+.notice-header h2 {
+  color: #2d3748;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 0;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.notice-header h2::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0.4rem;
+  height: 7rem;
+  background: linear-gradient(to bottom, #4299e1, #667eea);
+  border-radius: 0.2rem;
+}
+
+
+.general_notice-main table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-top: 1.5rem;
+}
+
+.general_notice-main thead,
+.general_notice-main tbody tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.general_notice-main tbody {
+  display: block;
+  max-height: 36rem;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e0 #f7fafc;
+}
+
+.general_notice-main tbody::-webkit-scrollbar {
+  width: 0.6rem;
+}
+
+.general_notice-main tbody::-webkit-scrollbar-track {
+  background: #f7fafc;
+  border-radius: 0.3rem;
+}
+
+.general_notice-main tbody::-webkit-scrollbar-thumb {
+  background-color: #cbd5e0;
+  border-radius: 0.3rem;
+  transition: background-color 0.3s;
+}
+
+.general_notice-main tbody::-webkit-scrollbar-thumb:hover {
+  background-color: #a0aec0;
+}
+
+.general_notice-main th, 
+.general_notice-main td {
+  border: 0.1rem solid #e2e8f0;
+  padding: 1.5rem;
+  text-align: left;
+  vertical-align: top;
+  transition: all 0.2s ease;
+}
+
+.general_notice-main th {
+  background: linear-gradient(to bottom, #f7fafc, #edf2f7);
+  font-weight: 600;
+  color: #4a5568;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.general_notice-main tbody tr {
+  background-color: white;
+  transition: all 0.2s ease;
+}
+
+.general_notice-main tbody tr:hover {
+  background-color: #f7fafc;
+  transform: translateX(0.2rem);
+}
+
+
+.notice-content {
+  color: #4a5568;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  position: relative;
+  padding-left: 1rem;
+}
+
+
+.attachment-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 0.8rem;
+  background-color: #f7fafc;
+  border-radius: 0.6rem;
+  transition: all 0.2s ease;
+}
+
+.attachment-wrapper:hover {
+  background-color: #edf2f7;
+}
+
+.file-icon {
+  width: 3.2rem;
+  height: 3.2rem;
+  transition: transform 0.2s ease;
+}
+
+.attachment-wrapper:hover .file-icon {
+  transform: scale(1.1);
+}
+
+.download-btn {
+  background: linear-gradient(to right, #48bb78, #3ff092);
+  color: white;
+  border: none;
+  padding: 0.8rem 1.6rem;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.download-btn:hover {
+  background: linear-gradient(to right, #38a169, #2f855a);
+  transform: translateY(-0.1rem);
+  box-shadow: 0 0.2rem 0.4rem rgba(56, 161, 105, 0.2);
+}
+
+.download-btn:active {
+  transform: translateY(0);
+}
+
+.no-attachment {
+  color: #a0aec0;
+  font-style: italic;
+  padding: 0.4rem 0.8rem;
+}
+
+
+.loading-notices,
+.error-notices,
+.no-notices {
+  text-align: center;
+  padding: 3rem;
+  color: #718096;
+  font-size: 1.1rem;
+  background: #f7fafc;
+  border-radius: 0.8rem;
+  margin: 2rem 0;
+  animation: fadeIn 0.3s ease;
+}
+
+.error-notices {
+  color: #e53e3e;
+  background: #fff5f5;
+  border: 0.1rem solid #fed7d7;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-1rem); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+@keyframes highlightNew {
+  0% { background-color: #e6fffa; }
+  100% { background-color: white; }
+}
+
+.notice-new {
+  animation: highlightNew 2s ease;
+}

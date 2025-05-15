@@ -1,0 +1,50 @@
+.dashboard {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    background-color: #fff;
+    padding-top: 17rem;
+  }
+  
+ 
+  .calendar-container,
+  .userlist-container,
+  .notice-container {
+    flex: 1;
+    margin: 0 1rem;
+    background-color: white;
+    padding:0.5rem;
+    border-radius: 0.8rem;
+    box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.1);
+  }
+  
+
+  .calendar-container {
+    flex: 3; 
+  }
+  
+  .notice-container {
+    flex: 5; 
+  }
+  
+  .userlist-container {
+    flex: 1; 
+  }
+@media (max-width:1200px){
+  
+
+  .userlist-container{
+    display: none;
+  }
+  .dashboard {
+    display: flex;
+    flex-direction: column;
+  }
+  .calendar-container {
+    order: 2;
+  }
+  .notice-container {
+    order: 1;
+  }
+
+}

@@ -1,0 +1,281 @@
+.admin-body {
+  display: flex;
+  min-height: 100vh;
+  margin-top: 15rem;
+  background-color: #f5f7fa;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.admin-sidebar {
+  min-width: 20rem;
+  background: #375f8d;
+  color: #fff;
+  padding: 3rem 2rem;
+  border: #fff 0.2rem solid;
+  box-shadow: 0.2rem 0 0.8rem rgba(0, 0, 0, 0.1);
+}
+
+.admin-sidebar h2 {
+  font-size: 1.8rem;
+  margin-bottom: 2.5rem;
+  border-bottom: 0.1rem solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 1rem;
+}
+
+.admin-sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.admin-sidebar li {
+  margin-bottom: 1.4rem;
+}
+
+.admin-sidebar a {
+  color: #ecf0f1;
+  text-decoration: none;
+  font-size: 1.55rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  transition: all 0.25s ease;
+  padding: 1rem 1.5rem;
+  border-radius: 0.8rem;
+  position: relative;
+}
+
+.admin-sidebar a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  transform: translateX(0.3rem);
+}
+
+.admin-sidebar a.active {
+  font-weight: 600;
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+}
+
+.admin-sidebar a.active::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.8rem;
+  height: calc(100% - 1.6rem);
+  width: 0.4rem;
+  background-color: #60a5fa;
+  border-radius: 0.4rem;
+}
+
+.user-menu-toggle,
+.announcement-menu-toggle,
+.course-menu-toggle {
+  font-size: 1.55rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  transition: color 0.25s ease;
+}
+
+.user-menu-toggle:hover,
+.announcement-menu-toggle:hover {
+  color: #000;
+}
+
+.admin-sidebar li ul {
+  transition: all 0.3s ease;
+}
+
+.admin-sidebar li ul li a {
+  font-size: 1.42rem;
+  padding: 0.7rem 2rem;
+}
+
+.admin-content {
+  flex-grow: 1;
+  padding: 3rem 4rem;
+  background-color: #f9fbfd;
+  overflow-y: auto;
+  border-left: 0.1rem solid #e0e0e0;
+}
+
+hr {
+  display: none;
+}
+
+@media (min-width: 1200px) {
+  .admin-sidebar {
+    position: sticky;
+    top: 15rem;
+    height: calc(100vh - 15rem);
+    overflow-y: auto;
+  }
+}
+
+
+@media (max-width: 1199px) {
+  .admin-body {
+    margin-top: 13rem;
+  }
+
+  .admin-sidebar {
+    min-width: 18rem;
+    padding: 2rem 1.5rem;
+  }
+
+  .admin-content {
+    padding: 2rem 3rem;
+  }
+
+  .user-datetime {
+    top: 9rem;
+  }
+  .announcement-menu-toggle, .user-menu-toggle, .course-menu-toggle {
+    font-size: 1.2rem;
+  }
+  .admin-sidebar li ul li a {
+    font-size: 1rem;
+  }
+
+}
+
+
+@media (max-width: 991px) {
+  .admin-body {
+    margin-top: 12rem;
+  }
+
+  .admin-sidebar {
+    min-width: 16rem;
+    padding: 2rem 1rem;
+  }
+
+  .admin-sidebar h2 {
+    font-size: 1.6rem;
+  }
+
+  .admin-sidebar a {
+    font-size: 1.4rem;
+    padding: 0.8rem 1.2rem;
+  }
+
+  .admin-content {
+    padding: 2rem;
+  }
+}
+
+
+@media (max-width: 767px) {
+  .admin-body {
+    flex-direction: column;
+    margin-top: 13rem;
+  }
+
+  .admin-sidebar {
+    width: 100%;
+    min-width: unset;
+    padding: 1.5rem;
+    border: none;
+    border-bottom: 0.2rem solid #fff;
+  }
+
+  .admin-sidebar ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .admin-sidebar li {
+    margin-bottom: 0.5rem;
+  }
+
+  .admin-sidebar a {
+    font-size: 1.3rem;
+    padding: 0.6rem 1rem;
+  }
+
+  .admin-content {
+    padding: 1.5rem;
+  }
+
+  .user-datetime {
+    position: static;
+    margin: 1rem auto;
+    width: fit-content;
+  }
+
+
+  hr {
+    display: block;
+    margin: 1rem 0;
+    border: none;
+    border-top: 0.1rem solid rgba(255, 255, 255, 0.1);
+  }
+}
+
+
+@media (max-width: 480px) {
+  .admin-body {
+    margin-top: 10rem;
+  }
+
+  .admin-sidebar {
+    padding: 1rem;
+  }
+
+  .admin-sidebar a {
+    font-size: 1.2rem;
+    padding: 0.5rem 0.8rem;
+  }
+
+  .admin-content {
+    padding: 1rem;
+  }
+
+  .user-menu-toggle,
+  .announcement-menu-toggle,
+  .course-menu-toggle {
+    font-size: 1.3rem;
+  }
+}
+
+
+.admin-sidebar::-webkit-scrollbar {
+  width: 0.4rem;
+}
+
+.admin-sidebar::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.admin-sidebar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 0.2rem;
+}
+
+
+.admin-sidebar a.active {
+  animation: slideIn 0.3s ease forwards;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-0.5rem);
+    opacity: 0.5;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+.user-menu-toggle,
+.announcement-menu-toggle,
+.course-menu-toggle {
+  transition: all 0.3s ease;
+}

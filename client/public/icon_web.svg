@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150">
+  <!-- Nền trắng -->
+  <rect width="150" height="150" fill="rgb(168, 168, 168)"/>
+
+  <!-- DẤU <> TRÊN -->
+  <path d="M 70.725 36.975 L 40.35 50.475 L 70.725 63.975" 
+        fill="none" 
+        stroke="#1e3799" 
+        stroke-width="15"
+        stroke-linecap="round"
+        stroke-linejoin="round"/>
+
+  <path d="M 77.475 36.975 L 107.85 50.475 L 77.475 63.975" 
+        fill="none" 
+        stroke="#1e3799" 
+        stroke-width="15"
+        stroke-linecap="round"
+        stroke-linejoin="round"/>
+
+  <!-- DẤU <> DƯỚI -->
+  <!-- Dấu < dưới (đã chỉnh sửa) -->
+  <path d="M 55.524 84.234 L 40.35 90.975 L 58.138 108.147" 
+        fill="none" 
+        stroke="#1e3799" 
+        stroke-width="15"
+        stroke-linecap="round"
+        stroke-linejoin="round"/>
+  
+  <!-- Dấu > dưới -->
+  <path d="M 92.660 90.471 L 107.85 103.463 L 73.345 118.301" 
+        fill="none" 
+        stroke="#1e3799" 
+        stroke-width="15"
+        stroke-linecap="round"
+        stroke-linejoin="round"/>
+
+  <!-- DẤU TỐT NGHIỆP -->
+  <rect x="33" y="48.45" width="10.8" height="18.9" fill="#1e3799"/>
+  <path d="M 38.4 67.35 L 31.15 77.475 L 47.65 77.475 Z" fill="#1e3799"/>
+</svg>

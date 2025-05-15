@@ -1,0 +1,234 @@
+.support-faq-page {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  margin-top: 15rem;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+  padding: 4rem 2rem;
+}
+
+.support-faq-container {
+  max-width: 1000px;
+  width: 95%;
+  background: #ffffff;
+  padding: 4rem;
+  border-radius: 2rem;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
+  animation: slideUp 0.5s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.support-faq-container h1 {
+  font-size: 2.8rem;
+  background: linear-gradient(45deg, #4a6fa5, #6b8cce);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-align: center;
+  margin-bottom: 4rem;
+  padding-bottom: 1.5rem;
+  position: relative;
+}
+
+.support-faq-container h1::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10rem;
+  height: 0.4rem;
+  background: linear-gradient(45deg, #4a6fa5, #6b8cce);
+  border-radius: 0.2rem;
+}
+
+.support-section, .faq-section {
+  background: #f8fafc;
+  padding: 3rem;
+  border-radius: 1.5rem;
+  margin-bottom: 3rem;
+  transition: transform 0.3s ease;
+}
+
+.support-section:hover, .faq-section:hover {
+  transform: translateY(-0.5rem);
+}
+
+.support-section h2, .faq-section h2 {
+  font-size: 2rem;
+  color: #2d3748;
+  margin-bottom: 2rem;
+  position: relative;
+  padding-left: 2rem;
+}
+
+.support-section h2::before, .faq-section h2::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0.4rem;
+  height: 2.5rem;
+  background: linear-gradient(45deg, #4a6fa5, #6b8cce);
+  border-radius: 0.2rem;
+}
+
+.support-section h3 {
+  font-size: 1.5rem;
+  color: #2d3748;
+  margin: 2.5rem 0 1.5rem;
+}
+
+.support-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.support-section li {
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.support-section li:hover {
+  transform: translateX(0.5rem);
+}
+
+.support-section li strong {
+  color: #4a6fa5;
+  margin-right: 1rem;
+  min-width: 10rem;
+}
+
+.faq-item {
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.faq-item:hover {
+  transform: translateX(0.5rem);
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+}
+
+.faq-item h3 {
+  font-size: 1.3rem;
+  color: #2d3748;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.faq-item h3::before {
+  content: '?';
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.4rem;
+  height: 2.4rem;
+  background: linear-gradient(45deg, #4a6fa5, #6b8cce);
+  color: white;
+  border-radius: 50%;
+  margin-right: 1rem;
+  font-size: 0.9rem;
+}
+
+.faq-item p {
+  color: #4a5568;
+  line-height: 1.6;
+  margin: 0;
+  padding-left: 3.4rem;
+}
+
+strong {
+  font-size: 1.5rem;
+}
+
+
+@media (max-width: 768px) {
+  .support-faq-container {
+    padding: 2rem;
+  }
+
+  .support-faq-container h1 {
+    font-size: 2.2rem;
+  }
+
+  .support-section h2, .faq-section h2 {
+    font-size: 1.8rem;
+  }
+
+  .support-section h3 {
+    font-size: 1.3rem;
+  }
+
+  .faq-item h3 {
+    font-size: 1.2rem;
+  }
+
+  .support-section li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .support-section li strong {
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .support-faq-page {
+    padding: 2rem 1rem;
+  }
+
+  .support-faq-container h1 {
+    font-size: 1.8rem;
+  }
+
+  .support-section, .faq-section {
+    padding: 2rem;
+  }
+
+  .support-section h2, .faq-section h2 {
+    font-size: 1.5rem;
+  }
+}
+
+
+@media print {
+  .support-faq-page {
+    margin: 0;
+    padding: 0;
+    background: white;
+  }
+
+  .support-faq-container {
+    box-shadow: none;
+    padding: 0;
+  }
+
+  .support-section, .faq-section {
+    break-inside: avoid;
+  }
+}
